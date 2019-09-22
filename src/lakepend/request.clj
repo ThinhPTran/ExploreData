@@ -22,9 +22,10 @@
   (some->> (fetch-for-year year)
            :body
            io/reader
-           line-seq))
+           line-seq
+           (drop 1)))
 
-;;(fetch-seq-for-year "2012")
+(fetch-seq-for-year "2012")
 
 
 ;;(some->> (http/get "https://github.com/ThinhPTran/LPO_weatherdata")
